@@ -1,0 +1,282 @@
+:root {
+    --color_principal: #222222;
+    --color_secundario: #8b7355;
+    --color_oscuro: #555555;
+    --color_claro: #ffffff;
+    --color_fondo: #f4f1ec;
+    --color_borde: #dddddd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color_fondo);
+    color: var(--color_principal);
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+}
+
+h1,h2,h3 {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color_oscuro);
+}
+
+/* HEADER */
+header {
+    background-color: var(--color_claro);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#logo h1 {
+    color: var(--color_principal);
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a:hover {
+    color: var(--color_secundario);
+}
+
+/* MAIN */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+    flex-wrap: wrap;
+}
+
+.hero_contenido,
+.hero_imagen {
+    flex: 1 1 300px;
+}
+
+.hero_contenido h2 {
+    font-size: 2.3rem;
+    color: var(--color_principal);
+}
+
+.hero_contenido p {
+    margin-bottom: 15px;
+}
+
+.hero_imagen img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* BOTÓN */
+.btn_accion {
+    display: inline-block;
+    background-color: var(--color_secundario);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn_accion:hover {
+    background-color: var(--color_principal);
+}
+
+/* TARJETAS */
+#informacion, .cursos {
+    padding: 40px 0;
+}
+
+#informacion h2, .cursos h2, .lista h2, .tabla h2, .texto h2, .contenido h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grid_cursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjeta_curso {
+    background-color: var(--color_claro);
+    border: 1px solid var(--color_borde);
+    border-radius: 8px;
+    flex: 1 1 280px;
+    max-width: 350px;
+    overflow: hidden;
+}
+
+.tarjeta_curso:hover {
+    transform: translateY(-3px);
+}
+
+.tarjeta_curso img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.info_curso {
+    padding: 20px;
+}
+
+.info_curso h3 {
+    color: var(--color_principal);
+}
+
+.info_curso p {
+    color: var(--color_oscuro);
+    margin-bottom: 15px;
+}
+
+
+.nivel {
+    display: inline-block;
+    background-color: var(--color_fondo);
+    color: var(--color_secundario);
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+/* LISTA */
+.lista {
+    background-color: var(--color_claro);
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.lista ul {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+.lista li {
+    margin-bottom: 10px;
+}
+
+/* TABLA */
+.tabla {
+    margin: 40px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color_claro);
+}
+
+th, td {
+    border: 1px solid var(--color_borde);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color_principal);
+    color: white;
+}
+
+/* SPAN */
+.texto {
+    background-color: var(--color_claro);
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.texto span {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.rojo {
+    background-color: #b54b4b;
+}
+
+.azul {
+    background-color: #477da8;
+}
+
+.verde {
+    background-color: #51855c;
+}
+
+.amarillo {
+    background-color: #b08b32;
+}
+
+.morado {
+    background-color: #75528a;
+}
+
+/* CONTENIDO */
+.contenido {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contenido iframe {
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color_principal);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero_contenido h2 {
+        font-size: 1.8rem;
+    }
+}
